@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const hbs = require('hbs');
-
+const port = process.env.PORT || 3000;
 const csp = require(`helmet-csp`);
 let app = express();
 
@@ -81,5 +81,7 @@ app.get('/bad', (req, res) => {
 
 
 
-app.listen(4000);
+app.listen(port, () => {
+    console.log(`server started on port: ${port}`);
+});
 
