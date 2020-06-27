@@ -26,8 +26,6 @@ app.use((req, res, next) => {
     next();
 })
 
-git
-
 app.use(express.static(__dirname + '/public'));
 
 // create a new view in view folder mantenance.hbs, render a h1 ->  BRB & the site is currentrly being updated, I'll be back soon
@@ -61,6 +59,14 @@ app.get('/about', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('home.hbs',{
         welcomeMsg: 'Welcome to my beautiful website',
+        
+        // currentYear: new Date().getFullYear()
+    })
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs',{
+        portfolio: 'This is my portfolio',
         
         // currentYear: new Date().getFullYear()
     })
