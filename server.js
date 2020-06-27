@@ -66,6 +66,7 @@ app.get('/home', (req, res) => {
 
 app.get('/projects', (req, res) => {
     res.render('projects.hbs',{
+        pageTitle: 'Projects',
         portfolio: 'This is my portfolio',
         
         // currentYear: new Date().getFullYear()
